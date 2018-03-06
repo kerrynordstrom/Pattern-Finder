@@ -2,7 +2,33 @@
 
   This program was built by Kerry Nordstrom in Node.js.
   
-  Solution and Code Complexity explanations are at the bottom of this README.
+  #### Solution
+
+ This program serves to take in two lists via stdin and returning a list fulfilling a list of specifications to the console, or if desired, to an output file.  
+  
+The program build requires the first line to be an integer of (N) patterns that will be available to match to any given pathway and after the block of patterns is another integer of (M) pathways which will be compared against the aforementioned patterns.  
+
+To run this program, place the included sample-input and pattern-finder.js files into a directory and cd to that directory.  Open terminal and type the following:
+
+```
+node pattern-finder.js < sample-input.txt
+```
+This will test the basic cases.  If you would like to test a more robust custom input, make sure that it follows the formatting described above and follow the same terminal syntax, replacing sample-input.txt with your own file name.
+
+For example, you may run the following from terminal and replace the pathways with your own:
+```bash
+cd /path/to/current/dir/
+node pattern-finder.js < /path/to/input/file/ > /path/to/output/file/
+```
+
+---
+
+#### Code Complexity
+As I'm using nested for loops and array iterative methods throughout the program, it frequently is 0(n^2) in time complexity.  The size of n inputs decreases as the logic of the program proceeds, but at hundreds of thousands of queries, the program would likely run slower. 
+
+A more ideal algorithmic approach might be a prefix trie structure, where the root node is empty, but its children are the characters of the string/array and each subsequent child is another letter in this string whereby the end is marked by a significant character not available in the string.  It would be possible to traverse nodes of a trie data structure in 0(n) time where n is the number of nodes needed to traverse.
+
+
 
 #### Problem Statement 
 
@@ -119,30 +145,3 @@ foo,bar,baz
 - Each line in the output should end with a newline character (that includes the final one). As with the input, use Unix-style newlines.
 
 ---
-
-#### Solution
-
- This program serves to take in two lists via stdin and returning a list fulfilling a list of specifications to the console, or if desired, to an output file.  
-  
-The program build requires the first line to be an integer of (N) patterns that will be available to match to any given pathway and after the block of patterns is another integer of (M) pathways which will be compared against the aforementioned patterns.  
-
-To run this program, place the included sample-input and pattern-finder.js files into a directory and cd to that directory.  Open terminal and type the following:
-
-```
-node pattern-finder.js < sample-input.txt
-```
-This will test the basic cases.  If you would like to test a more robust custom input, make sure that it follows the formatting described above and follow the same terminal syntax, replacing sample-input.txt with your own file name.
-
-For example, you may run the following from terminal and replace the pathways with your own:
-```bash
-cd /path/to/current/dir/
-node pattern-finder.js < /path/to/input/file/ > /path/to/output/file/
-```
-
----
-
-#### Code Complexity
-As I'm using nested for loops and array iterative methods throughout the program, it frequently is 0(n^2) in time complexity.  The size of n inputs decreases as the logic of the program proceeds, but at hundreds of thousands of queries, the program would likely run slower. 
-
-A more ideal algorithmic approach might be a prefix trie structure, where the root node is empty, but its children are the characters of the string/array and each subsequent child is another letter in this string whereby the end is marked by a significant character not available in the string.  It would be possible to traverse nodes of a trie data structure in 0(n) time where n is the number of nodes needed to traverse.
-
