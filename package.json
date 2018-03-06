@@ -1,0 +1,23 @@
+{
+  "name": "ov-pattern-matching",
+  "version": "1.0.0",
+  "description": "Patterns to Match",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest -i --coverage"
+  },
+  "keywords": [
+    "pattern-matching",
+    "patterns-and-paths",
+    "regex"
+  ],
+  "author": "Kerry Nordstrom",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^22.4.2",
+    "util": "^0.10.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.5"
+  }
+}
