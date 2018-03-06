@@ -1,6 +1,4 @@
-  # Outdoor Voices Coding Challenge
-
-  ## Pattern-Matching Paths 
+# Pattern-Matching Paths 
 
   This program was built by Kerry Nordstrom in Node.js.
   
